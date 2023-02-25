@@ -13,18 +13,6 @@
 <br>
 
 <div class="row">
-    <div class="card-header w-100">
-        @if (session('successMessage'))
-        <strong id="successMessage" hidden>{{ session('successMessage') }}</strong>
-        @elseif(session('errorMessage'))
-        <strong id="errorMessage" hidden>{{ session('errorMessage') }}</strong>
-        @endif
-        <div class="row ml-0 mt-2">
-            <div class="col-md-6">
-                <h3 class="h3">Data Kegiatan</h3>
-            </div>
-        </div>
-    </div>
     <div class="col-md-4">
         <div class="card flex">
             <div class="card-body py-4">
