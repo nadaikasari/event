@@ -9,13 +9,18 @@ use Yajra\DataTables\Facades\DataTables;
 
 class EventController extends Controller
 {
-    
+ 
+    public function __construct()
+    {
+        set_time_limit(8000000);
+    }
+
     public function getEvent()
     {
         $token = DataHelper::getToken();
         $token = $token->data->access_token;
 
-        $url = "https://skkm.sttbandung.ac.id/api/events/limit=10/offset=0";
+        $url = "https://skkm.sttbandung.ac.id/api/events/limit=5/offset=0";
 
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . $token,

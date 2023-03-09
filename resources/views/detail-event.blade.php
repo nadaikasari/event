@@ -21,7 +21,11 @@
                     <div class="container">
                         <div class="row">
                           <div class="col-3">
-                            <img src="data:image/png;base64,{{$response['photo_url']}}" alt="Image Poster" class="img-thumbnail">
+                            @if ($data['photo_url'] != NULL)
+                              <img src="data:image/png;base64,{{$response['photo_url']}}" alt="Image Poster" class="img-thumbnail">
+                            @else
+                              <img class="card-img-top" alt="Card image" src="{{$data['photo_dummy']}}" style="height: 350px; width: 270px;">
+                            @endif
                           </div>
                           <div class="col-9">
                             <div class="mb-3 row ml-0 mt-2">

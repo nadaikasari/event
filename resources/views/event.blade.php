@@ -24,7 +24,11 @@
                 <div class="card" style="width:400px">
                     <br>
                     <div class="container text-center">
+                        @if ($data['photo_url'] != NULL)    
                             <img class="card-img-top" alt="Card image" src="data:image/png;base64,{{$data['photo_url']}}" style="height: 350px; width: 270px;">
+                        @else
+                            <img class="card-img-top" alt="Card image" src="{{$data['photo_dummy']}}" style="height: 350px; width: 270px;">
+                        @endif
                     </div>
                     @if ($data['registration_status'] == 1)    
                         <form action="/events/register/{{$data['event_id']}}/s4SOOyuFmlqEfYnExhs+jQ==/Nada Ika Sari" method="post">
